@@ -46,3 +46,1634 @@ Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
   [1m[35mSQL (0.6ms)[0m  DELETE FROM "students" WHERE "students"."id" = ?  [["id", 2]]
   [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
   [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"
+Started GET "/students" for ::1 at 2019-07-22 11:21:57 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.7.1) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.7.1) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/Users/MichelleLam1/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/MichelleLam1/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/MichelleLam1/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.8ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.2ms)
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSchoolClasses (20190721185229)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "school_classes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "room_number" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190721185229"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-07-22 15:22:10.317139"], ["updated_at", "2019-07-22 15:22:10.317139"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Michelle"], ["last_name", "Lam"], ["created_at", "2019-07-22 15:22:41.936375"], ["updated_at", "2019-07-22 15:22:41.936375"]]
+  [1m[35m (8.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/students" for ::1 at 2019-07-22 11:22:44 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#index as HTML
+Completed 406 Not Acceptable in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (StudentsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.0.7.1) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
+actionpack (5.0.7.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.0.7.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.0.7.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.7.1) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.7.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.7.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.7.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.7.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:727:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/Users/MichelleLam1/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/MichelleLam1/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/MichelleLam1/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.4ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.0ms)
+Started GET "/students" for ::1 at 2019-07-22 11:23:46 -0400
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb
+  Rendered students/index.html.erb (0.7ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/students/index.html.erb:7: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/students/index.html.erb:7: syntax error, unexpected end-of-input, expecting end
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.7ms)
+Started GET "/students" for ::1 at 2019-07-22 11:24:05 -0400
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb (18.5ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/students" for ::1 at 2019-07-22 11:24:29 -0400
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb (1.1ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mStudent Load (1.7ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+Started GET "/students" for ::1 at 2019-07-22 11:25:33 -0400
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb (1.1ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students" for ::1 at 2019-07-22 11:25:40 -0400
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb (1.4ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/1" for ::1 at 2019-07-22 11:26:04 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering students/show.html.erb
+  Rendered students/show.html.erb (0.5ms)
+Completed 200 OK in 8ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students" for ::1 at 2019-07-22 11:27:44 -0400
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb (2.2ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    1: <h1>Student List</h1>
+    2: <ul>
+    3: <% @students.each do |student| %>
+    4: <li><%=link_to student.to_s student_path(student)%></li>
+    5: <%end%>
+    6: </ul>
+  
+app/models/student.rb:2:in `to_s'
+app/views/students/index.html.erb:4:in `block in _app_views_students_index_html_erb___3329706160477655137_70168592799540'
+app/views/students/index.html.erb:3:in `_app_views_students_index_html_erb___3329706160477655137_70168592799540'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.1ms)
+Started GET "/students" for ::1 at 2019-07-22 11:28:13 -0400
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb
+  Rendered students/index.html.erb (0.6ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/students/index.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+... "#{student.to_s}" student_path(student));@output_buffer.saf...
+...                   ^~~~~~~~~~~~):
+  
+app/views/students/index.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.8ms)
+Started GET "/students" for ::1 at 2019-07-22 11:29:35 -0400
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb (1.9ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/3" for ::1 at 2019-07-22 11:29:37 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering students/show.html.erb
+  Rendered students/show.html.erb (0.5ms)
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/new" for ::1 at 2019-07-22 11:40:37 -0400
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb
+  Rendered students/new.html.erb (29.1ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students/new" for ::1 at 2019-07-22 11:42:20 -0400
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb
+  Rendered students/new.html.erb (2.6ms)
+Completed 200 OK in 12ms (Views: 4.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/students" for ::1 at 2019-07-22 11:42:24 -0400
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9INp1yPkSSUnFuS/QZHqe1gRew81lOVRfuCEWqHRebFLY2QJEr6wanKZoYebpCch6fOjakEey/4iQitEl1LmAg==", "student"=>{"first_name"=>"Chloe", "last_name"=>"Lam"}, "commit"=>"Create Student"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/students_controller.rb:11:in `create'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.7ms)
+Started POST "/students" for ::1 at 2019-07-22 11:44:14 -0400
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9INp1yPkSSUnFuS/QZHqe1gRew81lOVRfuCEWqHRebFLY2QJEr6wanKZoYebpCch6fOjakEey/4iQitEl1LmAg==", "student"=>{"first_name"=>"Chloe", "last_name"=>"Lam"}, "commit"=>"Create Student"}
+Unpermitted parameters: first_name, last_name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "students" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-07-22 15:44:14.091544"], ["updated_at", "2019-07-22 15:44:14.091544"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/students/4
+Completed 302 Found in 11ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/students/4" for ::1 at 2019-07-22 11:44:14 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering students/show.html.erb
+  Rendered students/show.html.erb (1.8ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    1: <h1> Student Profile </h1>
+    2: 
+    3: <h2><%= @student.to_s %></h2>
+  
+app/models/student.rb:3:in `to_s'
+app/views/students/show.html.erb:3:in `_app_views_students_show_html_erb___4412804227352674376_70168593229300'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.0ms)
+Started POST "/students" for ::1 at 2019-07-22 11:45:11 -0400
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9INp1yPkSSUnFuS/QZHqe1gRew81lOVRfuCEWqHRebFLY2QJEr6wanKZoYebpCch6fOjakEey/4iQitEl1LmAg==", "student"=>{"first_name"=>"Chloe", "last_name"=>"Lam"}, "commit"=>"Create Student"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Chloe"], ["last_name", "Lam"], ["created_at", "2019-07-22 15:45:11.460774"], ["updated_at", "2019-07-22 15:45:11.460774"]]
+  [1m[35m (9.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/students/5
+Started GET "/students/new" for ::1 at 2019-07-22 11:46:31 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb
+  Rendered students/new.html.erb (43.8ms)
+Completed 200 OK in 64ms (Views: 49.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/students" for ::1 at 2019-07-22 11:46:38 -0400
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CD/GMEwBNX5jzbEHQIZs22ShYBHNwWCaT0LFw4zyEm+338vufVvMMTZC9D+as6GB1UO4dLlLTjUT4GrdunGN3A==", "student"=>{"first_name"=>"Buddy", "last_name"=>"Dog"}, "commit"=>"Create Student"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Buddy"], ["last_name", "Dog"], ["created_at", "2019-07-22 15:46:38.678812"], ["updated_at", "2019-07-22 15:46:38.678812"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/students/new" for ::1 at 2019-07-22 11:47:02 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb
+  Rendered students/new.html.erb (41.2ms)
+Completed 200 OK in 58ms (Views: 45.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/students" for ::1 at 2019-07-22 11:47:07 -0400
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7m7FzcjFtfWRM+g1YorQKcW4gOVIiK+nUeaTC/feiVRRjsgT+Z9MusS8rQ24vx1zdFpYgDwCgQgNRDwVwV0W5w==", "student"=>{"first_name"=>"Buddy", "last_name"=>"Dog"}, "commit"=>"Create Student"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Buddy"], ["last_name", "Dog"], ["created_at", "2019-07-22 15:47:07.813210"], ["updated_at", "2019-07-22 15:47:07.813210"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/students/7
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/students/7" for ::1 at 2019-07-22 11:47:07 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering students/show.html.erb
+  Rendered students/show.html.erb (0.5ms)
+Completed 200 OK in 8ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students/7/edit" for ::1 at 2019-07-22 11:50:58 -0400
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering students/edit.html.erb
+  Rendered students/edit.html.erb (2.1ms)
+Completed 200 OK in 14ms (Views: 3.8ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/students/7" for ::1 at 2019-07-22 11:51:04 -0400
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OcYu7XvaI3qRnTHAe/jOf/yo52pvtnRG6z6HLc/l3s6GJiMzSoDaNcQSdPihzQMlTUo/Dxs8Wum3nCgz+WZBfQ==", "student"=>{"first_name"=>"Buddy", "last_name"=>"Junior"}, "commit"=>"Edit Student", "id"=>"7"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "students" SET "last_name" = ?, "updated_at" = ? WHERE "students"."id" = ?[0m  [["last_name", "Junior"], ["updated_at", "2019-07-22 15:51:04.525076"], ["id", 7]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/students/7
+Completed 302 Found in 7ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/students/7" for ::1 at 2019-07-22 11:51:04 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering students/show.html.erb
+  Rendered students/show.html.erb (0.6ms)
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/new" for ::1 at 2019-07-22 12:04:54 -0400
+Processing by SchoolClassesController#new as HTML
+  Rendering school_classes/new.html.erb
+  Rendered school_classes/new.html.erb (4.2ms)
+Completed 200 OK in 18ms (Views: 7.0ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/school_classes" for ::1 at 2019-07-22 12:05:00 -0400
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TxKktt4lV1pYI1eUd0b3Ke4O4pBlRQA2V4ZMCiyaNsPw8qlo73+uFQ2sEqytczpzX+w69RHPLpkLJOMUGhmpcA==", "school_class"=>{"title"=>"math", "room_number"=>"304"}, "commit"=>"Create Class"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/school_classes_controller.rb:16:in `create'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.1ms)
+Started GET "/school_classes" for ::1 at 2019-07-22 12:05:21 -0400
+Processing by SchoolClassesController#index as HTML
+  Rendering school_classes/index.html.erb
+  Rendered school_classes/index.html.erb (0.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/index.html.erb:3: syntax error, unexpected class, expecting '|'
+... @school_classes.each do |class| 
+...                          ^~~~~
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/index.html.erb:4: syntax error, unexpected '.'
+...t_buffer.append=(link_to class.title, class_path(class));@ou...
+...                              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/index.html.erb:4: syntax error, unexpected ')'
+... class.title, class_path(class));@output_buffer.safe_append=...
+...                              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/index.html.erb:5: syntax error, unexpected end, expecting ')'
+'.freeze;end
+         ^~~
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/index.html.erb:7: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/index.html.erb:9: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/school_classes/index.html.erb:3: syntax error, unexpected class, expecting '|'
+app/views/school_classes/index.html.erb:4: syntax error, unexpected '.'
+app/views/school_classes/index.html.erb:4: syntax error, unexpected ')'
+app/views/school_classes/index.html.erb:5: syntax error, unexpected end, expecting ')'
+app/views/school_classes/index.html.erb:7: syntax error, unexpected ensure, expecting ')'
+app/views/school_classes/index.html.erb:9: syntax error, unexpected end, expecting ')'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.0ms)
+Started GET "/school_classes" for ::1 at 2019-07-22 12:05:45 -0400
+Processing by SchoolClassesController#index as HTML
+  Rendering school_classes/index.html.erb
+  Rendered school_classes/index.html.erb (0.6ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/index.html.erb:3: syntax error, unexpected class, expecting '|'
+... @school_classes.each do |class| 
+...                          ^~~~~
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/index.html.erb:4: syntax error, unexpected '.'
+...t_buffer.append=(link_to class.title, school_class_path(clas...
+...                              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/index.html.erb:4: syntax error, unexpected ')'
+...title, school_class_path(class));@output_buffer.safe_append=...
+...                              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/index.html.erb:5: syntax error, unexpected end, expecting ')'
+'.freeze;end
+         ^~~
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/index.html.erb:7: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/index.html.erb:9: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/school_classes/index.html.erb:3: syntax error, unexpected class, expecting '|'
+app/views/school_classes/index.html.erb:4: syntax error, unexpected '.'
+app/views/school_classes/index.html.erb:4: syntax error, unexpected ')'
+app/views/school_classes/index.html.erb:5: syntax error, unexpected end, expecting ')'
+app/views/school_classes/index.html.erb:7: syntax error, unexpected ensure, expecting ')'
+app/views/school_classes/index.html.erb:9: syntax error, unexpected end, expecting ')'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.7ms)
+  [1m[36mSchoolClass Load (1.5ms)[0m  [1m[34mSELECT "school_classes".* FROM "school_classes"[0m
+Started POST "/school_classes" for ::1 at 2019-07-22 12:07:04 -0400
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TxKktt4lV1pYI1eUd0b3Ke4O4pBlRQA2V4ZMCiyaNsPw8qlo73+uFQ2sEqytczpzX+w69RHPLpkLJOMUGhmpcA==", "school_class"=>{"title"=>"math", "room_number"=>"304"}, "commit"=>"Create Class"}
+Unpermitted parameters: utf8, authenticity_token, school_class, commit
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (private method `require' called for nil:NilClass):
+  
+app/controllers/school_classes_controller.rb:31:in `school_class_params'
+app/controllers/school_classes_controller.rb:16:in `create'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.4ms)
+Started GET "/school_classes" for ::1 at 2019-07-22 12:07:46 -0400
+Processing by SchoolClassesController#index as HTML
+  Rendering school_classes/index.html.erb
+  Rendered school_classes/index.html.erb (0.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/index.html.erb:3: syntax error, unexpected class, expecting '|'
+... @school_classes.each do |class| 
+...                          ^~~~~
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/index.html.erb:4: syntax error, unexpected '.'
+...t_buffer.append=(link_to class.title, school_class_path(clas...
+...                              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/index.html.erb:4: syntax error, unexpected ')'
+...title, school_class_path(class));@output_buffer.safe_append=...
+...                              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/index.html.erb:5: syntax error, unexpected end, expecting ')'
+'.freeze;end
+         ^~~
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/index.html.erb:7: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/index.html.erb:9: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/school_classes/index.html.erb:3: syntax error, unexpected class, expecting '|'
+app/views/school_classes/index.html.erb:4: syntax error, unexpected '.'
+app/views/school_classes/index.html.erb:4: syntax error, unexpected ')'
+app/views/school_classes/index.html.erb:5: syntax error, unexpected end, expecting ')'
+app/views/school_classes/index.html.erb:7: syntax error, unexpected ensure, expecting ')'
+app/views/school_classes/index.html.erb:9: syntax error, unexpected end, expecting ')'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.0ms)
+Started POST "/school_classes" for ::1 at 2019-07-22 12:08:06 -0400
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TxKktt4lV1pYI1eUd0b3Ke4O4pBlRQA2V4ZMCiyaNsPw8qlo73+uFQ2sEqytczpzX+w69RHPLpkLJOMUGhmpcA==", "school_class"=>{"title"=>"math", "room_number"=>"304"}, "commit"=>"Create Class"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/school_classes_controller.rb:31:in `school_class_params'
+app/controllers/school_classes_controller.rb:16:in `create'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.7ms)
+Started POST "/school_classes" for ::1 at 2019-07-22 12:08:39 -0400
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TxKktt4lV1pYI1eUd0b3Ke4O4pBlRQA2V4ZMCiyaNsPw8qlo73+uFQ2sEqytczpzX+w69RHPLpkLJOMUGhmpcA==", "school_class"=>{"title"=>"math", "room_number"=>"304"}, "commit"=>"Create Class"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/school_classes_controller.rb:32:in `school_class_params'
+app/controllers/school_classes_controller.rb:16:in `create'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.2ms)
+Started POST "/school_classes" for ::1 at 2019-07-22 12:08:56 -0400
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TxKktt4lV1pYI1eUd0b3Ke4O4pBlRQA2V4ZMCiyaNsPw8qlo73+uFQ2sEqytczpzX+w69RHPLpkLJOMUGhmpcA==", "school_class"=>{"title"=>"math", "room_number"=>"304"}, "commit"=>"Create Class"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "math"], ["room_number", 304], ["created_at", "2019-07-22 16:08:56.917861"], ["updated_at", "2019-07-22 16:08:56.917861"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/1
+Completed 302 Found in 10ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/school_classes/1" for ::1 at 2019-07-22 12:08:56 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.5ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:3: syntax error, unexpected ')', expecting '='
+...le, @school_class.room_number );@output_buffer.safe_append='...
+...                              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:4: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:6: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/school_classes/show.html.erb:3: syntax error, unexpected ')', expecting '='
+app/views/school_classes/show.html.erb:4: syntax error, unexpected ensure, expecting ')'
+app/views/school_classes/show.html.erb:6: syntax error, unexpected end, expecting ')'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.2ms)
+Started GET "/school_classes/new" for ::1 at 2019-07-22 12:10:18 -0400
+Processing by SchoolClassesController#new as HTML
+  Rendering school_classes/new.html.erb
+  Rendered school_classes/new.html.erb (2.0ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/school_classes" for ::1 at 2019-07-22 12:10:22 -0400
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ItqZXt9TCxLcRM8ej9oxXHApDZzK+xh0DK4A4MtCXs6dOpSA7gnyXYnLiiZV7/wGwcvV+b5xNttQDK/+/cHBfQ==", "school_class"=>{"title"=>"a;sldkjf", "room_number"=>"2356"}, "commit"=>"Create Class"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "a;sldkjf"], ["room_number", 2356], ["created_at", "2019-07-22 16:10:22.568938"], ["updated_at", "2019-07-22 16:10:22.568938"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/2
+Completed 302 Found in 7ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/school_classes/2" for ::1 at 2019-07-22 12:10:22 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:3: syntax error, unexpected ')', expecting '='
+...le, @school_class.room_number );@output_buffer.safe_append='...
+...                              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:4: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:6: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/school_classes/show.html.erb:3: syntax error, unexpected ')', expecting '='
+app/views/school_classes/show.html.erb:4: syntax error, unexpected ensure, expecting ')'
+app/views/school_classes/show.html.erb:6: syntax error, unexpected end, expecting ')'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 7]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT "school_classes".* FROM "school_classes"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "school_classes" WHERE "school_classes"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "school_classes" WHERE "school_classes"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Michelle"], ["last_name", "Lam"], ["created_at", "2019-07-22 16:10:49.106848"], ["updated_at", "2019-07-22 16:10:49.106848"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Reading"], ["room_number", 608], ["created_at", "2019-07-22 16:10:49.109868"], ["updated_at", "2019-07-22 16:10:49.109868"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSchoolClass Load (1.7ms)[0m  [1m[34mSELECT "school_classes".* FROM "school_classes"[0m
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT "school_classes".* FROM "school_classes"[0m
+Started GET "/school_classes/2" for ::1 at 2019-07-22 12:12:23 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find SchoolClass with 'id'=2):
+  
+app/controllers/school_classes_controller.rb:28:in `find_class'
+app/controllers/school_classes_controller.rb:8:in `show'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.5ms)
+Started POST "/school_classes" for ::1 at 2019-07-22 12:12:26 -0400
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ItqZXt9TCxLcRM8ej9oxXHApDZzK+xh0DK4A4MtCXs6dOpSA7gnyXYnLiiZV7/wGwcvV+b5xNttQDK/+/cHBfQ==", "school_class"=>{"title"=>"a;sldkjf", "room_number"=>"2356"}, "commit"=>"Create Class"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "a;sldkjf"], ["room_number", 2356], ["created_at", "2019-07-22 16:12:26.639989"], ["updated_at", "2019-07-22 16:12:26.639989"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/4
+Completed 302 Found in 5ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/school_classes/4" for ::1 at 2019-07-22 12:12:26 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.5ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:3: syntax error, unexpected ')', expecting '='
+...hool_class.room_number.to_str );@output_buffer.safe_append='...
+...                              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:4: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:6: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/school_classes/show.html.erb:3: syntax error, unexpected ')', expecting '='
+app/views/school_classes/show.html.erb:4: syntax error, unexpected ensure, expecting ')'
+app/views/school_classes/show.html.erb:6: syntax error, unexpected end, expecting ')'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.4ms)
+Started POST "/school_classes" for ::1 at 2019-07-22 12:12:52 -0400
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ItqZXt9TCxLcRM8ej9oxXHApDZzK+xh0DK4A4MtCXs6dOpSA7gnyXYnLiiZV7/wGwcvV+b5xNttQDK/+/cHBfQ==", "school_class"=>{"title"=>"a;sldkjf", "room_number"=>"2356"}, "commit"=>"Create Class"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "a;sldkjf"], ["room_number", 2356], ["created_at", "2019-07-22 16:12:52.932702"], ["updated_at", "2019-07-22 16:12:52.932702"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/5
+Completed 302 Found in 5ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/school_classes/5" for ::1 at 2019-07-22 12:12:52 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:4: unknown regexp option - h
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:4: unmatched close parenthesis: /h2>
+ <h2>@school_class.room_number );@output_buffer.safe_append='</
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:4: syntax error, unexpected tINTEGER, expecting ')'
+...output_buffer.safe_append='</h2>'.freeze;@output_buffer.to_s
+...                              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:7: unterminated string meets end of file
+          end
+              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:7: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/school_classes/show.html.erb:4: unknown regexp option - h
+app/views/school_classes/show.html.erb:4: unmatched close parenthesis: /h2>
+app/views/school_classes/show.html.erb:4: syntax error, unexpected tINTEGER, expecting ')'
+app/views/school_classes/show.html.erb:7: unterminated string meets end of file
+app/views/school_classes/show.html.erb:7: syntax error, unexpected end-of-input, expecting ')'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.6ms)
+Started GET "/school_classes/5" for ::1 at 2019-07-22 12:13:03 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.5ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:4: unknown regexp option - h
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:4: unmatched close parenthesis: /h2>
+ <h2>@school_class.room_number.to_str );@output_buffer.safe_append='</
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:4: syntax error, unexpected tINTEGER, expecting ')'
+...output_buffer.safe_append='</h2>'.freeze;@output_buffer.to_s
+...                              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:7: unterminated string meets end of file
+          end
+              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:7: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/school_classes/show.html.erb:4: unknown regexp option - h
+app/views/school_classes/show.html.erb:4: unmatched close parenthesis: /h2>
+app/views/school_classes/show.html.erb:4: syntax error, unexpected tINTEGER, expecting ')'
+app/views/school_classes/show.html.erb:7: unterminated string meets end of file
+app/views/school_classes/show.html.erb:7: syntax error, unexpected end-of-input, expecting ')'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.5ms)
+Started POST "/school_classes" for ::1 at 2019-07-22 12:13:07 -0400
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ItqZXt9TCxLcRM8ej9oxXHApDZzK+xh0DK4A4MtCXs6dOpSA7gnyXYnLiiZV7/wGwcvV+b5xNttQDK/+/cHBfQ==", "school_class"=>{"title"=>"a;sldkjf", "room_number"=>"2356"}, "commit"=>"Create Class"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "a;sldkjf"], ["room_number", 2356], ["created_at", "2019-07-22 16:13:07.721614"], ["updated_at", "2019-07-22 16:13:07.721614"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/6
+Completed 302 Found in 5ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/school_classes/6" for ::1 at 2019-07-22 12:13:07 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSchoolClass Load (0.3ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:4: unknown regexp option - h
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:4: unmatched close parenthesis: /h2>
+ <h2>@school_class.room_number.to_str );@output_buffer.safe_append='</
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:4: syntax error, unexpected tINTEGER, expecting ')'
+...output_buffer.safe_append='</h2>'.freeze;@output_buffer.to_s
+...                              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:7: unterminated string meets end of file
+          end
+              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:7: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/school_classes/show.html.erb:4: unknown regexp option - h
+app/views/school_classes/show.html.erb:4: unmatched close parenthesis: /h2>
+app/views/school_classes/show.html.erb:4: syntax error, unexpected tINTEGER, expecting ')'
+app/views/school_classes/show.html.erb:7: unterminated string meets end of file
+app/views/school_classes/show.html.erb:7: syntax error, unexpected end-of-input, expecting ')'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.6ms)
+Started GET "/school_classes/6" for ::1 at 2019-07-22 12:13:24 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.4ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:5: unknown regexp option - h
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:5: unmatched close parenthesis: /h2>
+byebug
+ <h2>@school_class.room_number.to_str);@output_buffer.safe_append='</
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:5: syntax error, unexpected tINTEGER, expecting ')'
+...output_buffer.safe_append='</h2>'.freeze;@output_buffer.to_s
+...                              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:8: unterminated string meets end of file
+          end
+              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:8: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/school_classes/show.html.erb:5: unknown regexp option - h
+app/views/school_classes/show.html.erb:5: unmatched close parenthesis: /h2>
+app/views/school_classes/show.html.erb:5: syntax error, unexpected tINTEGER, expecting ')'
+app/views/school_classes/show.html.erb:8: unterminated string meets end of file
+app/views/school_classes/show.html.erb:8: syntax error, unexpected end-of-input, expecting ')'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.6ms)
+Started POST "/school_classes" for ::1 at 2019-07-22 12:13:26 -0400
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ItqZXt9TCxLcRM8ej9oxXHApDZzK+xh0DK4A4MtCXs6dOpSA7gnyXYnLiiZV7/wGwcvV+b5xNttQDK/+/cHBfQ==", "school_class"=>{"title"=>"a;sldkjf", "room_number"=>"2356"}, "commit"=>"Create Class"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "a;sldkjf"], ["room_number", 2356], ["created_at", "2019-07-22 16:13:26.482572"], ["updated_at", "2019-07-22 16:13:26.482572"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/7
+Completed 302 Found in 4ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/school_classes/7" for ::1 at 2019-07-22 12:13:26 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.5ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:5: unknown regexp option - h
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:5: unmatched close parenthesis: /h2>
+byebug
+ <h2>@school_class.room_number.to_str);@output_buffer.safe_append='</
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:5: syntax error, unexpected tINTEGER, expecting ')'
+...output_buffer.safe_append='</h2>'.freeze;@output_buffer.to_s
+...                              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:8: unterminated string meets end of file
+          end
+              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:8: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/school_classes/show.html.erb:5: unknown regexp option - h
+app/views/school_classes/show.html.erb:5: unmatched close parenthesis: /h2>
+app/views/school_classes/show.html.erb:5: syntax error, unexpected tINTEGER, expecting ')'
+app/views/school_classes/show.html.erb:8: unterminated string meets end of file
+app/views/school_classes/show.html.erb:8: syntax error, unexpected end-of-input, expecting ')'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.8ms)
+Started POST "/school_classes" for ::1 at 2019-07-22 12:14:06 -0400
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ItqZXt9TCxLcRM8ej9oxXHApDZzK+xh0DK4A4MtCXs6dOpSA7gnyXYnLiiZV7/wGwcvV+b5xNttQDK/+/cHBfQ==", "school_class"=>{"title"=>"a;sldkjf", "room_number"=>"2356"}, "commit"=>"Create Class"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "a;sldkjf"], ["room_number", 2356], ["created_at", "2019-07-22 16:14:07.006429"], ["updated_at", "2019-07-22 16:14:07.006429"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/8
+Completed 302 Found in 10ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/school_classes/8" for ::1 at 2019-07-22 12:14:07 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mSchoolClass Load (0.3ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Started GET "/school_classes/new" for ::1 at 2019-07-22 12:15:05 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SchoolClassesController#new as HTML
+  Rendering school_classes/new.html.erb
+  Rendered school_classes/new.html.erb (50.6ms)
+Completed 200 OK in 85ms (Views: 61.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/school_classes/new" for ::1 at 2019-07-22 12:15:06 -0400
+Processing by SchoolClassesController#new as HTML
+  Rendering school_classes/new.html.erb
+  Rendered school_classes/new.html.erb (2.3ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/school_classes" for ::1 at 2019-07-22 12:15:10 -0400
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kQtvoHDMcfpsQgmsReoJ+jIZ01kadEO2+Ofilmd6xKUu62J+QZaItTnNTJSf38Sgg/sLPG7+bRmkRU2IUflbFg==", "school_class"=>{"title"=>"helo", "room_number"=>"9203"}, "commit"=>"Create Class"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "helo"], ["room_number", 9203], ["created_at", "2019-07-22 16:15:10.681567"], ["updated_at", "2019-07-22 16:15:10.681567"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/9
+Completed 302 Found in 7ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/school_classes/9" for ::1 at 2019-07-22 12:15:10 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (1.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:5: unknown regexp option - h
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:5: unmatched close parenthesis: /h2>
+
+ <h2>@school_class.room_number.to_str);@output_buffer.safe_append='</
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:5: syntax error, unexpected tINTEGER, expecting ')'
+...output_buffer.safe_append='</h2>'.freeze;@output_buffer.to_s
+...                              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:8: unterminated string meets end of file
+          end
+              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:8: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/school_classes/show.html.erb:5: unknown regexp option - h
+app/views/school_classes/show.html.erb:5: unmatched close parenthesis: /h2>
+app/views/school_classes/show.html.erb:5: syntax error, unexpected tINTEGER, expecting ')'
+app/views/school_classes/show.html.erb:8: unterminated string meets end of file
+app/views/school_classes/show.html.erb:8: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/school_classes/new" for ::1 at 2019-07-22 12:15:24 -0400
+Processing by SchoolClassesController#new as HTML
+  Rendering school_classes/new.html.erb
+  Rendered school_classes/new.html.erb (5.6ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/school_classes" for ::1 at 2019-07-22 12:15:27 -0400
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/BERTTQpiI8Z6OZDRGItawBh9KefGoHvg26FtjpW7UND8RyTBXNxwExno3ueV+AxsYMswuuQr0DfzCqoDNVy8A==", "school_class"=>{"title"=>"ddd", "room_number"=>"ddd"}, "commit"=>"Create Class"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "ddd"], ["room_number", 0], ["created_at", "2019-07-22 16:15:27.652618"], ["updated_at", "2019-07-22 16:15:27.652618"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/10
+Completed 302 Found in 5ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/school_classes/10" for ::1 at 2019-07-22 12:15:27 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (3.1ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:5: unknown regexp option - h
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:5: unmatched close parenthesis: /h2>
+
+ <h2>@school_class.room_number.to_str);@output_buffer.safe_append='</
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:5: syntax error, unexpected tINTEGER, expecting ')'
+...output_buffer.safe_append='</h2>'.freeze;@output_buffer.to_s
+...                              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:8: unterminated string meets end of file
+          end
+              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:8: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/school_classes/show.html.erb:5: unknown regexp option - h
+app/views/school_classes/show.html.erb:5: unmatched close parenthesis: /h2>
+app/views/school_classes/show.html.erb:5: syntax error, unexpected tINTEGER, expecting ')'
+app/views/school_classes/show.html.erb:8: unterminated string meets end of file
+app/views/school_classes/show.html.erb:8: syntax error, unexpected end-of-input, expecting ')'
+Started POST "/school_classes" for ::1 at 2019-07-22 12:15:48 -0400
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/BERTTQpiI8Z6OZDRGItawBh9KefGoHvg26FtjpW7UND8RyTBXNxwExno3ueV+AxsYMswuuQr0DfzCqoDNVy8A==", "school_class"=>{"title"=>"ddd", "room_number"=>"ddd"}, "commit"=>"Create Class"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "ddd"], ["room_number", 0], ["created_at", "2019-07-22 16:15:48.698440"], ["updated_at", "2019-07-22 16:15:48.698440"]]
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/11
+Completed 302 Found in 19ms (ActiveRecord: 9.9ms)
+
+
+Started GET "/school_classes/11" for ::1 at 2019-07-22 12:15:48 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.5ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:5: unknown regexp option - h
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:5: unmatched close parenthesis: /h2>
+
+ <h2>@school_class.room_number.to_str);@output_buffer.safe_append='</
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:5: syntax error, unexpected tINTEGER, expecting ')'
+...output_buffer.safe_append='</h2>'.freeze;@output_buffer.to_s
+...                              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:8: unterminated string meets end of file
+          end
+              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:8: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/school_classes/show.html.erb:5: unknown regexp option - h
+app/views/school_classes/show.html.erb:5: unmatched close parenthesis: /h2>
+app/views/school_classes/show.html.erb:5: syntax error, unexpected tINTEGER, expecting ')'
+app/views/school_classes/show.html.erb:8: unterminated string meets end of file
+app/views/school_classes/show.html.erb:8: syntax error, unexpected end-of-input, expecting ')'
+Started POST "/school_classes" for ::1 at 2019-07-22 12:15:57 -0400
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/BERTTQpiI8Z6OZDRGItawBh9KefGoHvg26FtjpW7UND8RyTBXNxwExno3ueV+AxsYMswuuQr0DfzCqoDNVy8A==", "school_class"=>{"title"=>"asdf", "room_number"=>"3346"}, "commit"=>"Create Class"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "asdf"], ["room_number", 3346], ["created_at", "2019-07-22 16:15:57.620887"], ["updated_at", "2019-07-22 16:15:57.620887"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/12
+Completed 302 Found in 5ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/school_classes/12" for ::1 at 2019-07-22 12:15:57 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:5: unknown regexp option - h
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:5: unmatched close parenthesis: /h2>
+
+ <h2>@school_class.room_number.to_str);@output_buffer.safe_append='</
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:5: syntax error, unexpected tINTEGER, expecting ')'
+...output_buffer.safe_append='</h2>'.freeze;@output_buffer.to_s
+...                              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:8: unterminated string meets end of file
+          end
+              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:8: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/school_classes/show.html.erb:5: unknown regexp option - h
+app/views/school_classes/show.html.erb:5: unmatched close parenthesis: /h2>
+app/views/school_classes/show.html.erb:5: syntax error, unexpected tINTEGER, expecting ')'
+app/views/school_classes/show.html.erb:8: unterminated string meets end of file
+app/views/school_classes/show.html.erb:8: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/school_classes/12" for ::1 at 2019-07-22 12:33:16 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mSchoolClass Load (0.4ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.5ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:5: unknown regexp option - h
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:5: unmatched close parenthesis: /h2>
+
+ <h2>@school_class.room_number.to_str);@output_buffer.safe_append='</
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:5: syntax error, unexpected tINTEGER, expecting ')'
+...output_buffer.safe_append='</h2>'.freeze;@output_buffer.to_s
+...                              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:8: unterminated string meets end of file
+          end
+              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:8: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/school_classes/show.html.erb:5: unknown regexp option - h
+app/views/school_classes/show.html.erb:5: unmatched close parenthesis: /h2>
+app/views/school_classes/show.html.erb:5: syntax error, unexpected tINTEGER, expecting ')'
+app/views/school_classes/show.html.erb:8: unterminated string meets end of file
+app/views/school_classes/show.html.erb:8: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/school_classes/1" for ::1 at 2019-07-22 12:33:29 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find SchoolClass with 'id'=1):
+  
+app/controllers/school_classes_controller.rb:28:in `find_class'
+app/controllers/school_classes_controller.rb:8:in `show'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.9ms)
+  [1m[36mSchoolClass Load (1.6ms)[0m  [1m[34mSELECT "school_classes".* FROM "school_classes"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT "school_classes".* FROM "school_classes"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "school_classes" WHERE "school_classes"."id" = ?[0m  [["id", 3]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "school_classes" WHERE "school_classes"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "school_classes" WHERE "school_classes"."id" = ?[0m  [["id", 5]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "school_classes" WHERE "school_classes"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "school_classes" WHERE "school_classes"."id" = ?[0m  [["id", 7]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "school_classes" WHERE "school_classes"."id" = ?[0m  [["id", 8]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "school_classes" WHERE "school_classes"."id" = ?[0m  [["id", 9]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "school_classes" WHERE "school_classes"."id" = ?[0m  [["id", 10]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "school_classes" WHERE "school_classes"."id" = ?[0m  [["id", 11]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "school_classes" WHERE "school_classes"."id" = ?[0m  [["id", 12]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Michelle"], ["last_name", "Lam"], ["created_at", "2019-07-22 16:34:06.130606"], ["updated_at", "2019-07-22 16:34:06.130606"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Reading"], ["room_number", 608], ["created_at", "2019-07-22 16:34:06.133861"], ["updated_at", "2019-07-22 16:34:06.133861"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSchoolClass Load (1.2ms)[0m  [1m[34mSELECT "school_classes".* FROM "school_classes"[0m
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT "school_classes".* FROM "school_classes"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "school_classes" WHERE "school_classes"."id" = ?[0m  [["id", 13]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Reading"], ["room_number", 608], ["created_at", "2019-07-22 16:35:19.969108"], ["updated_at", "2019-07-22 16:35:19.969108"]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSchoolClasses (20190721185229)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "school_classes"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20190721185229"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateStudents (1)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreateStudents < ActiveRecord::Migration[4.2] (called from block in execute at /Users/MichelleLam1/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273)
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "students"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "1"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateStudents (1)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreateStudents < ActiveRecord::Migration[4.2] (called from block in execute at /Users/MichelleLam1/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273)
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "students" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "1"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateSchoolClasses (20190721185229)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "school_classes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "room_number" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190721185229"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT "school_classes".* FROM "school_classes"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Michelle"], ["last_name", "Lam"], ["created_at", "2019-07-22 16:35:51.496106"], ["updated_at", "2019-07-22 16:35:51.496106"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Reading"], ["room_number", 608], ["created_at", "2019-07-22 16:35:51.503457"], ["updated_at", "2019-07-22 16:35:51.503457"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSchoolClass Load (1.4ms)[0m  [1m[34mSELECT "school_classes".* FROM "school_classes"[0m
+Started POST "/school_classes" for ::1 at 2019-07-22 12:36:13 -0400
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/BERTTQpiI8Z6OZDRGItawBh9KefGoHvg26FtjpW7UND8RyTBXNxwExno3ueV+AxsYMswuuQr0DfzCqoDNVy8A==", "school_class"=>{"title"=>"asdf", "room_number"=>"3346"}, "commit"=>"Create Class"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "asdf"], ["room_number", 3346], ["created_at", "2019-07-22 16:36:13.519462"], ["updated_at", "2019-07-22 16:36:13.519462"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/2
+Completed 302 Found in 11ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/school_classes/2" for ::1 at 2019-07-22 12:36:13 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.4ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:5: unknown regexp option - h
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:5: unmatched close parenthesis: /h2>
+
+ <h2>@school_class.room_number.to_str);@output_buffer.safe_append='</
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:5: syntax error, unexpected tINTEGER, expecting ')'
+...output_buffer.safe_append='</h2>'.freeze;@output_buffer.to_s
+...                              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:8: unterminated string meets end of file
+          end
+              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:8: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/school_classes/show.html.erb:5: unknown regexp option - h
+app/views/school_classes/show.html.erb:5: unmatched close parenthesis: /h2>
+app/views/school_classes/show.html.erb:5: syntax error, unexpected tINTEGER, expecting ')'
+app/views/school_classes/show.html.erb:8: unterminated string meets end of file
+app/views/school_classes/show.html.erb:8: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/school_classes/%60" for ::1 at 2019-07-22 12:36:20 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"`"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find SchoolClass with 'id'=`):
+  
+app/controllers/school_classes_controller.rb:28:in `find_class'
+app/controllers/school_classes_controller.rb:8:in `show'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.2ms)
+Started GET "/school_classes/1" for ::1 at 2019-07-22 12:36:24 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:5: unknown regexp option - h
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:5: unmatched close parenthesis: /h2>
+
+ <h2>@school_class.room_number.to_str);@output_buffer.safe_append='</
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:5: syntax error, unexpected tINTEGER, expecting ')'
+...output_buffer.safe_append='</h2>'.freeze;@output_buffer.to_s
+...                              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:8: unterminated string meets end of file
+          end
+              ^
+/Users/MichelleLam1/Development/intro/rails-form_for-lab-dc-web-062419/app/views/school_classes/show.html.erb:8: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/school_classes/show.html.erb:5: unknown regexp option - h
+app/views/school_classes/show.html.erb:5: unmatched close parenthesis: /h2>
+app/views/school_classes/show.html.erb:5: syntax error, unexpected tINTEGER, expecting ')'
+app/views/school_classes/show.html.erb:8: unterminated string meets end of file
+app/views/school_classes/show.html.erb:8: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/school_classes/1" for ::1 at 2019-07-22 12:44:37 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.4ms)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/school_classes/1" for ::1 at 2019-07-22 12:45:11 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.5ms)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/school_classes/new" for ::1 at 2019-07-22 12:48:51 -0400
+Processing by SchoolClassesController#new as HTML
+  Rendering school_classes/new.html.erb
+  Rendered school_classes/new.html.erb (19.0ms)
+Completed 200 OK in 31ms (Views: 20.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/school_classes" for ::1 at 2019-07-22 12:49:01 -0400
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P0c/0GeGdHALkvNk11qJwowh7C5SDtfHcKw85sTlwvCApzIOVtyNP14dtlwNb0SYPcM0SyaE+WgsDpP48mZdQw==", "school_class"=>{"title"=>"hello", "room_number"=>"730"}, "commit"=>"Create Class"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "hello"], ["room_number", 730], ["created_at", "2019-07-22 16:49:01.074400"], ["updated_at", "2019-07-22 16:49:01.074400"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/3
+Completed 302 Found in 7ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/school_classes/3" for ::1 at 2019-07-22 12:49:01 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSchoolClass Load (0.5ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.5ms)
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/school_classes/new" for ::1 at 2019-07-22 12:51:15 -0400
+Processing by SchoolClassesController#new as HTML
+  Rendering school_classes/new.html.erb
+  Rendered school_classes/new.html.erb (1.8ms)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/school_classes" for ::1 at 2019-07-22 12:51:47 -0400
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JESLMuhtZBYXBpWrNSRhoZoXXEH8gIIZ7Z1gt4tJiMCbpIbs2TedWUKJ0JPvEaz7K/WEJIgKrLaxP8+pvcoXcw==", "school_class"=>{"title"=>"", "room_number"=>""}, "commit"=>"Create School Class"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", ""], ["created_at", "2019-07-22 16:51:47.986664"], ["updated_at", "2019-07-22 16:51:47.986664"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/4
+Completed 302 Found in 6ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/school_classes/4" for ::1 at 2019-07-22 12:51:48 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSchoolClass Load (0.3ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.5ms)
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/school_classes/4/edit" for ::1 at 2019-07-22 12:54:08 -0400
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSchoolClass Load (0.3ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 400 Bad Request in 14ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: school_class):
+  
+app/controllers/school_classes_controller.rb:31:in `school_class_params'
+app/controllers/school_classes_controller.rb:22:in `edit'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.8ms)
+Started GET "/school_classes/4" for ::1 at 2019-07-22 12:54:23 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (1.4ms)
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/school_classes/1/edit" for ::1 at 2019-07-22 12:54:34 -0400
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: school_class):
+  
+app/controllers/school_classes_controller.rb:31:in `school_class_params'
+app/controllers/school_classes_controller.rb:22:in `edit'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.7ms)
+Started GET "/school_classes/1/edit" for ::1 at 2019-07-22 12:55:09 -0400
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/edit.html.erb
+  Rendered school_classes/edit.html.erb (2.1ms)
+Completed 200 OK in 13ms (Views: 3.8ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/school_classes/1" for ::1 at 2019-07-22 12:55:14 -0400
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t4CwMoWG5xc9Ixy3k9mvBBbjENPrKVpjvcXXE4st5Z8IYL3stNweWGisWY9J7GJepwHItp+jdMzhZ3gNva56LA==", "school_class"=>{"title"=>"Reading", "room_number"=>"383"}, "commit"=>"Create School class", "id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/school_classes_controller.rb:25:in `update'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (15.3ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.1ms)
+Started PATCH "/school_classes/1" for ::1 at 2019-07-22 12:55:35 -0400
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t4CwMoWG5xc9Ixy3k9mvBBbjENPrKVpjvcXXE4st5Z8IYL3stNweWGisWY9J7GJepwHItp+jdMzhZ3gNva56LA==", "school_class"=>{"title"=>"Reading", "room_number"=>"383"}, "commit"=>"Create School class", "id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "school_classes" SET "room_number" = ?, "updated_at" = ? WHERE "school_classes"."id" = ?[0m  [["room_number", 383], ["updated_at", "2019-07-22 16:55:35.952299"], ["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+No template found for SchoolClassesController#update, rendering head :no_content
+Completed 204 No Content in 29ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/school_classes/1/edit" for ::1 at 2019-07-22 12:55:56 -0400
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/edit.html.erb
+  Rendered school_classes/edit.html.erb (2.1ms)
+Completed 200 OK in 13ms (Views: 3.6ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/school_classes/1" for ::1 at 2019-07-22 12:55:57 -0400
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gGHdtwInLBopxMiqc8gWWEku8qa6LHwEY5Er/Rbp+b8/gdBpM33VVXxLjZKp/dsC+Mwqw86mUqs/M4TjIGpmDA==", "school_class"=>{"title"=>"Reading", "room_number"=>"383"}, "commit"=>"Create School class", "id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `school_class' for #<SchoolClassesController:0x00007fe03b8d7458>
+Did you mean?  school_class_url):
+  
+app/controllers/school_classes_controller.rb:27:in `update'
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/MichelleLam1/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.5ms)
+Started GET "/school_classes/1" for ::1 at 2019-07-22 12:56:13 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb
+  Rendered school_classes/show.html.erb (0.6ms)
+Completed 200 OK in 17ms (Views: 2.2ms | ActiveRecord: 0.7ms)
+
+
